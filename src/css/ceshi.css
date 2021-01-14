@@ -1,0 +1,22 @@
+div {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+}
+
+h1 {
+  width: 200px;
+  height: 200px;
+  display: block;
+}
+
+/* 渐进增强 和 优雅降级 */
+p {
+  transition: all 1s;
+}
+
+.box {
+  transition: height 3s;
+  display: flex;
+  animation: aaa 1s;
+}

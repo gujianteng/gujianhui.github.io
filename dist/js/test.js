@@ -1,0 +1,1 @@
+"use strict";var _this=void 0,num=100;console.log(num);for(var i=0;i<10;i++)console.log(i);var str="hello world",_str="你好 世界";console.log(_str),console.log(str);var aaa=100,fn=function(){console.log(_this)};

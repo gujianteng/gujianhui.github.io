@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+    }
+  </style>
+
+  <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+
+  <!-- 我是一段注释 -->
+
+  <h1 class="box">我是一个 h1 标签</h1>
+  <p>随便写一点文本内容就可以了</p>
+  <p>随便写一点文本内容就可以了</p>
+
+  <input type="checkbox" checked="checked">
+  <input type="checkbox">
+
+
+  <script>
+    // 使用原生 js 发送一个请求
+    //   使用 gulp 配置了代理
+    // 我们就直接请求代理标识符就可以了
+    var xhr = new XMLHttpRequest()
+
+    xhr.open('get', '/gx')
+
+    xhr.onload = function () {
+      console.log(xhr.responseText)
+    }
+
+    xhr.send()
+  </script>
+</body>
+</html>
