@@ -1,1 +1,52 @@
-<!DOCTYPE html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="ie=edge"><title>Document</title><style>*{margin:0;padding:0}div{width:100px;height:100px;background-color:pink}</style><link rel=stylesheet href=../css/index.css></head><body><h1 class=box>我是一个 h1 标签</h1><p>随便写一点文本内容就可以了</p><p>随便写一点文本内容就可以了</p><input type=checkbox checked> <input type=checkbox><script>var xhr=new XMLHttpRequest;xhr.open("get","/gx"),xhr.onload=function(){console.log(xhr.responseText)},xhr.send()</script></body></html>
+<!DOCTYPE html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Document</title><link rel=stylesheet href=../../dist/sass/index.css><link rel=stylesheet href=../../dist/lib/swiper/swiper-bundle.css></head><body><script src=../js/index.js></script><script src=../lib/jquery/dist/jquery.js></script><script src=../lib/swiper/swiper-bundle.js></script><div class=header><div class=container><ul><li>1</li><span>|</span><li>2</li><span>|</span><li>3</li><span>|</span><li>4</li><span>|</span><li>5</li><span>|</span><li>6</li><span>|</span><li>7</li><span>|</span><li>8</li><span>|</span><li>9</li><span>|</span><li>10</li></ul><ol><li>1</li><li>2</li><li>3</li><li>4</li></ol></div></div><div class="nav_top container"><ul></ul></div><div class=nav_box><ul class=container><li><div><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/3bf20f1df3f2e22c5b29ff07634f3c59.png?thumb=1&w=320&h=220&f=webp&q=90" alt=""></div><p class=title>小米手机</p><span class=price>1999</span></li><li><div><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/3bf20f1df3f2e22c5b29ff07634f3c59.png?thumb=1&w=320&h=220&f=webp&q=90" alt=""></div><p class=title>小米手机</p><span class=price>1999</span></li><li><div><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/3bf20f1df3f2e22c5b29ff07634f3c59.png?thumb=1&w=320&h=220&f=webp&q=90" alt=""></div><p class=title>小米手机</p><span class=price>1999</span></li><li><div><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/3bf20f1df3f2e22c5b29ff07634f3c59.png?thumb=1&w=320&h=220&f=webp&q=90" alt=""></div><p class=title>小米手机</p><span class=price>1999</span></li><li><div><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/3bf20f1df3f2e22c5b29ff07634f3c59.png?thumb=1&w=320&h=220&f=webp&q=90" alt=""></div><p class=title>小米手机</p><span class=price>1999</span></li><li><div><img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/3bf20f1df3f2e22c5b29ff07634f3c59.png?thumb=1&w=320&h=220&f=webp&q=90" alt=""></div><p class=title>小米手机</p><span class=price>1999</span></li></ul></div><script>function getList(){
+            $.ajax({
+                url:'../lib/nav_top.json',
+                dataType:'json',
+                success:function(res){
+                    console.log(res);
+                    // 4-1.准备一个空字符串
+                    let str =''
+                    //4-2. 渲染一级的Li
+                    res.forEach(item => {
+                        str += `<li>${ item.name}</li>`
+                    });
+                    //4-3. 填充到 nav_top 里面的 ul 里面
+                    $('.nav_top > ul')
+                        .html(str)
+                        .on({
+                            mouseenter: ()=> $('.nav_box').stop().slideDown(),
+                            mouseleave: () => $('.nav_box').stop().slideUp()
+                        })
+                        .children('li') 
+                        .on('mouseover', function () {
+                            // 5-1. 知道自己移入的是哪个li
+                            const index = $(this).index()
+                            // 5-2. 找到要渲染的数组
+                            const list = res[index].list
+                            // 5-3. 用我们找到的数组把 nav_box 位置渲染了就可以了
+                            let str = ''
+                            // 5-4. 进行组装
+                            list.forEach(item =>{
+                                str +=`
+                                <li>
+                                    <div>
+                                        <img src="${ item.list_url}" alt="">
+                                    </div>
+                                    <p class="title">${ item.list_name}</p>
+                                    <span class="price">${ item.list_price}</span>
+                                </li>
+                                `
+                            })
+                            // 5-5. 填充到页面里面
+                             $('.nav_box > ul').html(str)
+                        })
+                    // 4-4. 给 nav_box 添加移入移出事件
+                    $('.nav_box')
+                       .on({
+                           mouseover : function(){ $(this).finish().show()},
+                           mouseout: function () { $(this).finish().slideUp()}
+                       })
+                }
+            })
+        }
+        getList()</script></body></html>
