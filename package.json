@@ -15,7 +15,9 @@
   "author": "gujianteng",
   "license": "ISC",
   "dependencies": {
-    "jquery": "^3.5.1"
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.5.1",
+    "swiper": "^5.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",

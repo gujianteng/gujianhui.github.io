@@ -1,9 +1,47 @@
-h1 {
-    width: 100px;
-    height: 100px;
-    background-color: pink;
+.box {
+  width: 992px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+.clearfix::after, .clearfix::before {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+ul {
+  width: 100%;
+  padding: 20px 0;
+
+  > li {
+    width: 20%;
+    padding-left: 20px;
+    box-sizing: border-box;
+    border-right: 1px solid #ccc;
+    float: left;
+    display: flex;
+    flex-direction: column;
+
+    &:last-child {
+      border: none;
+    }
+
+    > ol {
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+
+      > li {
+        width: 50%;
+        font-size: 14px;
+        color: #888;
+        padding-bottom: 10px;
+      }
+    }
   }
-  
-  div {
-    width: 200px;
-  }
+}

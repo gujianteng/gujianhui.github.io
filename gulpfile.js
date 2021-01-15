@@ -21,7 +21,7 @@ const sassHandler=()=>{
                 .pipe(sass())
                 .pipe(autoprefixer())
                 .pipe(cssmin())
-                .pipe(gulp.dest('./dist/css'))
+                .pipe(gulp.dest('./dist/sass'))
 }
 
 const jsHandler = () => {
