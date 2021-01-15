@@ -1,5 +1,5 @@
 
-   var fengzhuangswiper=function (){
+   var fengswiper=function (){
     var mySwiper = new Swiper ('.swiper-container', {
         // direction: 'vertical', // 垂直切换选项
         loop: true, // 循环模式选项
@@ -29,11 +29,9 @@
     
     function getList() {
       $.ajax({
-        url: '../lib/nav_top.json',
+        url: '../lib/navTop.json',
         dataType: 'json',
         success: function (res) {
-          console.log(res)
-    
           // 4-1. 准备一个空字符串
           let str = ''
     
@@ -87,5 +85,5 @@
 }
 
 export default {
-    fengzhuangswiper
+    fengswiper
   }

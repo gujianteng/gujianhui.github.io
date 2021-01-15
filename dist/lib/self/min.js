@@ -1,2 +1,7 @@
 import moduleA from './fengzhuangswiper.js'
-moduleA.fengzhuangswiper()
+
+import moduleB from './navfirst.js'
+
+
+moduleA.fengswiper()
+moduleB.navf()

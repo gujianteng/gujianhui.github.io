@@ -1,0 +1,50 @@
+.header {
+    height: 40px;
+    width: 100%;
+    background-color: #333;
+  
+    > .container {
+      cursor: pointer;
+
+      color: #fff;
+      height: 100%;
+      position: relative;
+  
+      > ul {
+        float: left;
+        height: 100%;
+        width: 794px;
+  
+        > li {
+          &:hover{ color: #ffb3ff; }
+
+          float: left;
+          font-size: 12px;
+          line-height: 40px;
+          margin-right: 2px;
+          color: #A7A7A7;
+          
+        }
+      }
+  
+      > ol {
+        float: right;
+        width: 143px;
+        height: 100%;
+        position: absolute;
+        left: 850px;
+        
+        > li {
+          &:hover{ color: #ffb3ff; }
+
+          float: left;
+          font-size: 12px;
+          line-height: 40px;
+          margin-right: 5px;
+          color: #A7A7A7;
+          
+        }
+  
+      }
+    }
+  }
