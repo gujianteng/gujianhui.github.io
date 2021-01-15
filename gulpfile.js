@@ -38,8 +38,10 @@ const htmlHandler = () => {
             removeComments: true,
             collapseBooleanAttributes: true,
             collapseWhitespace: true,
-            minifyCSS: true,
-            minifyJS: true,
+            minifyJS: true,	
+            minifyCSS: true	,
+            processConditionalComments:true,
+            minifyURLs:true
 
         }))
         .pipe(gulp.dest('./dist/pages'))
