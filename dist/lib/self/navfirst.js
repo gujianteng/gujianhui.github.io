@@ -14,7 +14,7 @@ var navf = function () {
                   $('.gu').html(str)
                 //   第20个li创建三角型这个元素
                   $('.gu > li').eq(20)
-                  .append("<div class='sanjiaoapp'><div class='sanjiao'></div><div class='sanjiaoimg'><img src='../../images/sanjiaoimg.jpg'><div class='appzi'>小米商城APP</div></div></div>")
+                  .append("<div class='sanjiaoapp'><div class='sanjiao'></div><div class='sanjiaoimg'><img src='../images/sanjiaoimg.jpg'><div class='appzi'>小米商城APP</div></div></div>")
                 // 给第20个li添加类名
                 $('.gu > li').eq(20).addClass('sanjiaoli')
 
