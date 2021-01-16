@@ -24,7 +24,7 @@ var navf = function () {
                     })
                     // 移入的时候app图片下滑
                     $('.sanjiaoimg').stop().slideDown(200, 'linear', function () {
-                        console.log('下滑结束')
+                        // console.log('下滑结束')
                       })
                   })
                   $('.gu > li').eq(20).on('mouseout', function(){
@@ -33,7 +33,7 @@ var navf = function () {
                     })
                     // 鼠标一开上滑
                     $('.sanjiaoimg').stop().slideUp(200, 'linear', function () {
-                        console.log('下滑结束')
+                        // console.log('下滑结束')
                       })
                   })
 
