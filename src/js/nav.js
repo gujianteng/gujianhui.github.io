@@ -5,73 +5,89 @@ $.ajax({
     url: '../lib/navfirst.json',
     dataType: 'json',
     success: function (res) {
-      // console.log(res);
-      var str = ''
-      res.forEach(item => {
-        str += `<li>${item.name}</li>`
-      })
-      //   console.log(str);
-      $('.gu').html(str)
-      //   第20个li创建三角型这个元素
-      $('.gu > li').eq(20)
-        .append("<div class='sanjiaoapp'><div class='sanjiao'></div><div class='sanjiaoimg'><img src='../images/sanjiaoimg.jpg'><div class='appzi'>小米商城APP</div></div></div>")
-      // 给第20个li添加类名
-      $('.gu > li').eq(20).addClass('sanjiaoli')
-  
-      $('.gu > li').eq(20).on('mouseover', function () {
-        $(".sanjiaoli>.sanjiaoapp>.sanjiao").css({
-          display: 'block'
+        // console.log(res);
+        var str = ''
+        res.forEach(item => {
+            str += `<li>${item.name}</li>`
         })
-        // 移入的时候app图片下滑
-        $('.sanjiaoimg').stop().slideDown(200, 'linear', function () {
-          // console.log('下滑结束')
+        //   console.log(str);
+        $('.gu').html(str)
+        //   第20个li创建三角型这个元素
+        $('.gu > li').eq(20)
+            .append("<div class='sanjiaoapp'><div class='sanjiao'></div><div class='sanjiaoimg'><img src='../images/sanjiaoimg.jpg'><div class='appzi'>小米商城APP</div></div></div>")
+        // 给第20个li添加类名
+        $('.gu > li').eq(20).addClass('sanjiaoli')
+
+        $('.gu > li').eq(20).on('mouseenter', function () {
+            $(".sanjiaoli>.sanjiaoapp>.sanjiao").css({
+                display: 'block'
+            })
+            // 移入的时候app图片下滑
+            $('.sanjiaoimg').stop().slideDown(100, 'linear', function () {
+                // console.log('下滑结束')
+            })
         })
-      })
-      $('.gu > li').eq(20).on('mouseout', function () {
-        $(".sanjiaoli>.sanjiaoapp>.sanjiao").css({
-          display: 'none'
+        $('.gu > li').eq(20).on('mouseleave', function () {
+            $(".sanjiaoli>.sanjiaoapp>.sanjiao").css({
+                display: 'none'
+            })
+            // 鼠标一开上滑
+            $('.sanjiaoimg').stop().slideUp(100, 'linear', function () {
+                // console.log('下滑结束')
+            })
         })
-        // 鼠标一开上滑
-        $('.sanjiaoimg').stop().slideUp(200, 'linear', function () {
-          // console.log('下滑结束')
-        })
-      })
-  
+
     }
-  })
-  
-  
-  
-  
-  $('.card').on('mouseover', function () {
+})
+
+
+
+
+$('.card').on('mouseenter', function () {
     $(".iconliang ").css({
-      background: 'white'
+        background: 'white'
     })
     $('.iconright').css({
-      color: 'red'
+        color: 'red'
     })
     $('.icon').css({
-      color: 'red'
+        color: 'red'
     })
-    $('.cardxiahua').stop().slideDown(200, 'linear', function () { })
-  
-  })
-  
-  
-  
-  $('.card').on('mouseout', function () {
+    $('.loadimg').css({
+        display:'block'
+    })
+    $('.xiahuazi').css({
+        display:'none'
+    })
+    $('.cardxiahua').stop().slideDown(200, 'linear', function () {
+        $('.loadimg').css({
+            display:'none'
+        })
+        $('.xiahuazi').css({
+            display:'block'
+        })
+    })
+    // $('.loadimg').css({
+    //     display:'none'
+    // })
+
+})
+
+
+
+$('.card').on('mouseleave', function () {
     $(".iconliang ").css({
-      background: '#424242'
+        background: '#424242'
     })
     $('.iconright').css({
-      color: '#b0b0b0'
+        color: '#b0b0b0'
     })
     $('.icon').css({
-      color: '#b0b0b0'
+        color: '#b0b0b0'
     })
-  
+
     $('.cardxiahua').stop().slideUp(200, 'linear', function () { })
-  })
-  
-  
-  
+    
+})
+
+
