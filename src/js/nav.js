@@ -23,7 +23,7 @@ $.ajax({
                 display: 'block'
             })
             // 移入的时候app图片下滑
-            $('.sanjiaoimg').stop().slideDown(100, 'linear', function () {
+            $('.sanjiaoimg').stop().slideDown(200, 'linear', function () {
                 // console.log('下滑结束')
             })
         })
@@ -32,7 +32,7 @@ $.ajax({
                 display: 'none'
             })
             // 鼠标一开上滑
-            $('.sanjiaoimg').stop().slideUp(100, 'linear', function () {
+            $('.sanjiaoimg').stop().slideUp(200, 'linear', function () {
                 // console.log('下滑结束')
             })
         })
