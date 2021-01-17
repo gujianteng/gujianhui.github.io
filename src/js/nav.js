@@ -67,10 +67,6 @@ $('.card').on('mouseenter', function () {
             display:'block'
         })
     })
-    // $('.loadimg').css({
-    //     display:'none'
-    // })
-
 })
 
 
