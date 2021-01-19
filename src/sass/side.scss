@@ -1,0 +1,135 @@
+.side {
+    width: 100%;
+    height: 100px;
+    position: relative;
+
+    >.container {
+        >.header-logo {
+            overflow: hidden;
+            position: relative;
+            width: 55px;
+            height: 55px;
+            background-color: #ff6700;
+            float: left;
+            margin-top: 22px;
+            margin-right: 7px;
+            cursor: pointer;
+
+            >.mimi {
+                position: absolute;
+                width: 110px;
+                left: -55px;
+
+                >.fimg {
+                    height: 55px;
+                    width: 55px;
+                    display: inline;
+                    float: left;
+                }
+
+                >.zimg {
+                    height: 55px;
+                    width: 55px;
+                    float: left;
+                    display: inline;
+
+                }
+
+            }
+
+        }
+
+        >.header-nav {
+            width: 850px;
+            height: 100px;
+            float: left;
+            padding: 12px 0px 0px 30px;
+            // background: gold;
+            overflow: hidden;
+
+            >.nav-list {
+                // background: red;
+
+                height: 100px;
+                // line-height: 100px;
+                >li{
+                    float: left;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    // height: 100px;
+                    height: 100px;
+                    // line-height: 80px;
+                    font-size: 16px;
+                    margin-top: 30px;
+                    >a{
+                        // line-height: 10px;
+                        display: block;
+                        float: left;
+                        height: 100%;
+                        // margin-top: 0px;
+                    cursor: pointer;
+                    text-decoration: none;
+                    color: #333;
+                    &:hover {
+                        color: #ff6700;
+                    }
+
+                    }
+                }
+
+                >.nav-category {
+                    width: 142px;
+                    // background: greenyellow;
+                    height: 100%;
+                    padding-right: 15px;
+                }
+            }
+        }
+        >.nav_box{
+        position: absolute;
+        width: 100%;
+        background-color: #fff;
+        height: 229px;
+        top:100px;
+        left: 0;
+        display: none;
+        box-shadow: 0px 5px 5px -5px #a7a7a7;
+        >ul{
+            >.boxli{
+                &:before{
+                    display: none;
+                }
+            }
+            >li{
+                width: 204px;
+                height: 201px;
+                padding: 35px 12px 0px;
+                >div{
+                    >img{
+                        transform:scale(1);
+                        width: 160px;
+                        height: 110px;
+                    }
+                }
+                float: left;
+                text-align: center;
+                cursor: pointer;
+                padding: 35px 12px 0px;
+                &:before{
+                    content: ' ';
+                    width: 1px;
+                    height: 100px;
+                    display: block;
+                    background:#e0e0e0;
+                    // float: left;
+                    position: absolute;
+
+                }
+                >.price{
+                    color: #ff6700;
+                }
+            }
+        }
+        }
+    }
+}
