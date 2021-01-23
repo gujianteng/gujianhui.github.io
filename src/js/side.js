@@ -116,3 +116,23 @@ $('.header-search').on('mouseleave', function () {
         borderColor:'#e0e0e0'
     })
 })
+
+
+$('.header-search>.inpj>input').on('focus', function () {
+    $('.header-search>.inpj').css({
+        borderColor:'red'
+    })
+    $('.butj>button').css({
+        borderColor:'red'
+    })
+})
+// $('.header-search>.inpj>input').on('blur', function () {
+//     $('.header-search>.inpj').css({
+//         borderColor:'red'
+
+//     })
+//     $('.butj>button').css({
+//         borderColor:'red'
+
+//     })
+// })
