@@ -51,8 +51,9 @@
                 // background: red;
 
                 height: 100px;
+
                 // line-height: 100px;
-                >li{
+                >li {
                     float: left;
                     padding-left: 10px;
                     padding-right: 10px;
@@ -61,18 +62,20 @@
                     // line-height: 80px;
                     font-size: 16px;
                     margin-top: 30px;
-                    >a{
+
+                    >a {
                         // line-height: 10px;
                         display: block;
                         float: left;
                         height: 100%;
                         // margin-top: 0px;
-                    cursor: pointer;
-                    text-decoration: none;
-                    color: #333;
-                    &:hover {
-                        color: #ff6700;
-                    }
+                        cursor: pointer;
+                        text-decoration: none;
+                        color: #333;
+
+                        &:hover {
+                            color: #ff6700;
+                        }
 
                     }
                 }
@@ -85,51 +88,111 @@
                 }
             }
         }
-        >.nav_box{
-        position: absolute;
-        width: 100%;
-        background-color: #fff;
-        height: 229px;
-        top:100px;
-        left: 0;
-        display: none;
-        box-shadow: 0px 5px 5px -5px #a7a7a7;
-        >ul{
-            >.boxli{
-                &:before{
-                    display: none;
-                }
-            }
-            >li{
-                width: 204px;
-                height: 201px;
-                padding: 35px 12px 0px;
-                >div{
-                    >img{
-                        transform:scale(1);
-                        width: 160px;
-                        height: 110px;
+
+        >.nav_box {
+            position: absolute;
+            width: 100%;
+            background-color: #fff;
+            height: 229px;
+            top: 100px;
+            left: 0;
+            display: none;
+            box-shadow: 0px 5px 5px -5px #a7a7a7;
+
+            >ul {
+                >.boxli {
+                    &:before {
+                        display: none;
                     }
                 }
-                float: left;
-                text-align: center;
-                cursor: pointer;
-                padding: 35px 12px 0px;
-                &:before{
-                    content: ' ';
-                    width: 1px;
-                    height: 100px;
-                    display: block;
-                    background:#e0e0e0;
-                    // float: left;
-                    position: absolute;
 
-                }
-                >.price{
-                    color: #ff6700;
+                >li {
+                    width: 204px;
+                    height: 201px;
+                    padding: 35px 12px 0px;
+
+                    >div {
+                        >img {
+                            transform: scale(1);
+                            width: 160px;
+                            height: 110px;
+                        }
+                    }
+
+                    float: left;
+                    text-align: center;
+                    cursor: pointer;
+                    padding: 35px 12px 0px;
+
+                    &:before {
+                        content: ' ';
+                        width: 1px;
+                        height: 100px;
+                        display: block;
+                        background: #e0e0e0;
+                        // float: left;
+                        position: absolute;
+
+                    }
+
+                    >.price {
+                        color: #ff6700;
+                    }
                 }
             }
         }
+
+        >.header-search {
+            // width: 296px;
+            // height: 50px;
+            background: red;
+            float: right;
+            margin-top: 25px;
+
+            >.inpj {
+                float: left;
+                height: 50px;
+                border: 1px solid #e0e0e0;
+                border-right: none;
+
+                >input {
+                    height: 100%;
+                    width: 245px;
+                    padding: 0 10px;
+                    border: none;
+                }
+            }
+
+            >.butj {
+                float: left;
+                width: 52px;
+                height: 50px;
+
+                >button {
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    background: white;
+                    border: 1px solid #e0e0e0;
+
+                    &:hover {
+                        background: #ff6700;
+                        border: none;
+
+                        >span {
+                            color: white;
+                        }
+                    }
+
+                    >span {
+                        font-size: 30px;
+                        color: #616161;
+
+                    }
+                }
+            }
+
         }
+
     }
 }

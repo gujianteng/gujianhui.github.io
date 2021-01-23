@@ -64,10 +64,12 @@ const webserverHandler = () => {
             port: 8080,
             open: './pages/index.html',
             livereload: true,
-            proxies:[{
+            proxies:[
+                {
                 source:'/gx',
                 target:'http://127.0.0.1/test.php'
-            }]
+                }
+        ]
         }))
 }
 

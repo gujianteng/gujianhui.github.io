@@ -20,7 +20,7 @@ function getlist() {
         url: '../lib/navTop.json',
         dataType: 'json',
         success: function (res) {
-            console.log(res);
+            // console.log(res);
             let str = ''
             res.forEach(item => {
                 str += `<li><a>${item.name}<a/></li>`
@@ -29,14 +29,14 @@ function getlist() {
             $('.nav-list').append(str)
             // console.log($('.nav-category').siblings().children(':even'));
             $('.nav-category').siblings().on('mouseenter', function () {
-                $('.nav_box').stop().slideDown(200, 'linear', function () {})
+                $('.nav_box').stop().slideDown(200, 'linear', function () { })
                 // 5-1. 知道自己移入的时哪一个 li>a
                 let index = $(this).index()
                 // 5-2. 找到要渲染的数组
                 // console.log(index);
                 const list = res[index - 1].list
                 $(this).children().eq(1).css({
-                    display:'none'
+                    display: 'none'
                 })
                 // console.log(list);
                 let str = ''
@@ -63,7 +63,7 @@ function getlist() {
             })
 
             $('.nav-category').siblings().on('mouseleave', function () {
-                $('.nav_box').stop().slideUp(200, 'linear', function () {})
+                $('.nav_box').stop().slideUp(200, 'linear', function () { })
             })
 
 
@@ -74,7 +74,7 @@ function getlist() {
 
                     },
                     mouseleave: function () {
-                        $(this).finish().slideUp(200, 'linear', function () {})
+                        $(this).finish().slideUp(200, 'linear', function () { })
 
                     }
                 })
@@ -87,3 +87,32 @@ function getlist() {
 
     })
 }
+
+
+$.ajax({
+    url: '../lib/search.json',
+    dataType: 'json',
+    success: function (res) {
+        console.log(res)
+    }
+})
+
+
+$('.header-search').on('mouseenter', function () {
+    $('.header-search>.inpj').css({
+        borderColor:'#b0b0b0'
+    })
+    $('.butj>button').css({
+        borderColor:'#b0b0b0'
+    })
+
+})
+
+$('.header-search').on('mouseleave', function () {
+    $('.header-search>.inpj').css({
+        borderColor:'#e0e0e0'
+    })
+    $('.butj>button').css({
+        borderColor:'#e0e0e0'
+    })
+})
