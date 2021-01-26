@@ -31,7 +31,10 @@ function getlist() {
             $('.nav-category').siblings().on('mouseenter', function () {
                 // 鼠标移入让搜索框失去焦点
                 $('.header-search>.inpj>input').attr('readonly', "readonly")
-                // 让边框变回默认样式
+                // 鼠标移入到二级菜单时让搜索框下面div消失
+                $('.keyword-list').css({
+                    display:'none'
+                })
                 handlerB()
                 // 让搜索框有移入效果
                 $('.header-search').on('mouseenter', handlerA)
@@ -96,7 +99,7 @@ $.ajax({
         $('.header-search>.inpj>input').attr('placeholder', `${res[index].search_title}`)
         setTimeout(() => {
             index++
-        }, 1000);
+        }, 3000);
         // 写一个自动轮播的函数
         function autoP() {
             ding = setInterval(() => {
@@ -105,7 +108,7 @@ $.ajax({
                     index = 0 - 1
                 }
                 index++
-            }, 1000);
+            }, 3000);
         }
         autoP()
         // 切换窗口和最小化时停止定时器
@@ -174,12 +177,20 @@ function handlerB() {
 $('.header-search').on('mouseleave', handlerB)
 
 
-// 聚焦的函数
-function focusA() {
+// 失去焦点的函数
+function blurA() {
+    $('.keyword-list').css({
+        display:'none'
+    })
+    handlerB()
+    // 让搜索框有移入效果
+    $('.header-search').on('mouseenter', handlerA)
+    // 让搜索框有移出效果
+    $('.header-search').on('mouseleave', handlerB)
 
 
 }
-$('.header-search>.inpj>input').on('focus', focusA)
+$('.header-search>.inpj>input').on('blur', blurA)
 $('.header-search>.inpj>input').on('click', function () {
     $('.header-search>.inpj>input').removeAttr('readonly')
     $('.header-search>.inpj').css({
@@ -216,6 +227,10 @@ $('.header-search>.inpj>input').on('click', function () {
             borderStyle: "solid"
         })
     })
+    // 鼠标按下时 让搜索框下面的DIV显示
+    $('.keyword-list').css({
+        display:'block'
+    })
 })
 
 
@@ -247,3 +262,11 @@ function butB() {
 }
 $('.header-search>.butj>button').on('mouseenter', butA)
 $('.header-search>.butj>button').on('mouseleave', butB)
+// 移动到搜索框下面DIV的时候解绑搜索框失焦事件
+$('.header-search>.keyword-list>ul').on('mouseenter',function(){
+    $('.header-search>.inpj>input').off('blur', blurA)
+})
+// 移出搜索框下面DIV的时候重新绑定搜索框失焦事件
+$('.header-search>.keyword-list>ul').on('mouseleave',function(){
+    $('.header-search>.inpj>input').on('blur', blurA)
+})
