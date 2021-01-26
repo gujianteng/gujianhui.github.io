@@ -99,7 +99,7 @@ $.ajax({
         $('.header-search>.inpj>input').attr('placeholder', `${res[index].search_title}`)
         setTimeout(() => {
             index++
-        }, 3000);
+        }, 5000);
         // 写一个自动轮播的函数
         function autoP() {
             ding = setInterval(() => {
@@ -108,7 +108,7 @@ $.ajax({
                     index = 0 - 1
                 }
                 index++
-            }, 3000);
+            }, 5000);
         }
         autoP()
         // 切换窗口和最小化时停止定时器
