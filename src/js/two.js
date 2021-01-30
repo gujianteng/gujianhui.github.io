@@ -1,4 +1,4 @@
-var mySwiper = new Swiper ('.swiper-container', {
+var mySwiper = new Swiper ('#swiper1', {
     // direction: 'vertical', // 垂直切换选项
     loop: true, // 循环模式选项
     autoplay: {
@@ -20,11 +20,11 @@ var mySwiper = new Swiper ('.swiper-container', {
     }
   })
 //   鼠标移入轮播图内轮播图停止轮播
-  $('.swiper-container').on('mouseenter',function(){
+  $('.two>.home-hero>.container>.banner>.swiper-container').on('mouseenter',function(){
     mySwiper.autoplay.stop();
   })
   //   鼠标移出轮播图时轮播图又自动轮播
-  $('.swiper-container').on('mouseleave',function(){
+  $('.two>.home-hero>.container>.banner>.swiper-container').on('mouseleave',function(){
     mySwiper.autoplay.start();
   })
 
@@ -51,7 +51,7 @@ var mySwiper = new Swiper ('.swiper-container', {
             ul_list.forEach(item=>{
                     // console.log(item.ul_name);
                     item.ul_name.forEach(item=>{
-                        console.log(item);
+                        // console.log(item);
                         strb+=`<li><img src=${item.li_url}><span>${item.li_name}<span></li>`
                     })
                     stra+=`<ul>${strb}</ul>`
