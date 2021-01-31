@@ -359,13 +359,16 @@
                     right: 0;
 
                     >a {
+                        &:hover{
+                            color: #ff6700
+                        }
                         font-size: 16px;
                         line-height: 58px;
                         color: #424242;
                         transition: all .4s;
                         text-decoration: none;
 
-                        >i {}
+                        // >i {}
                     }
                 }
 
