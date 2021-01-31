@@ -13,6 +13,10 @@ $('.header-logo').on('mouseleave', function () {
 })
 
 
+
+
+
+
 // 二级菜单渲染
 getlist()
 function getlist() {
@@ -27,13 +31,15 @@ function getlist() {
             });
             // 在第一级ul里面追加内容
             $('.nav-list').append(str)
-            // console.log($('.nav-category').siblings().children(':even'));
-            $('.nav-category').siblings().on('mouseenter', function () {
+
+            // 一级菜单鼠标移入的函数
+            function yijicai() {
+                // console.log($('.nav-category').siblings());
                 // 鼠标移入让搜索框失去焦点
                 $('.header-search>.inpj>input').attr('readonly', "readonly")
                 // 鼠标移入到二级菜单时让搜索框下面div消失
                 $('.keyword-list').css({
-                    display:'none'
+                    display: 'none'
                 })
                 handlerB()
                 // 让搜索框有移入效果
@@ -41,16 +47,16 @@ function getlist() {
                 // 让搜索框有移出效果
                 $('.header-search').on('mouseleave', handlerB)
                 // 让搜索框有点击的函数
-                $('.nav_box').stop().slideDown(200, 'linear', function () { })
+                $('.nav_box').stop().slideDown(200, function () {
+                 })
+
                 // 5-1. 知道自己移入的时哪一个 li>a
                 let index = $(this).index()
                 // 5-2. 找到要渲染的数组
-                // console.log(index);
                 const list = res[index - 1].list
                 $(this).children().eq(1).css({
                     display: 'none'
                 })
-                // console.log(list);
                 let str = ''
                 list.forEach(item => {
                     str += `
@@ -67,18 +73,41 @@ function getlist() {
                     $('.nav_box').css({
                         borderTop: ' 1px solid #e0e0e0'
                     })
+                    if ($(this).index() == 7) {
+                        $('.nav_box > ul >li').last().addClass('hjhj')
+                        $('.hjhj>.title').css({
+                            color: "#333",
+                            fontSize: 12
+
+                        })
+                        $('.hjhj>.price').css({
+                            color: "#333",
+                            fontSize: 12
+                        })
+                    }
+
+                })
+            }
+            $('.nav-category').siblings().on('mouseenter', yijicai)
+            $('.nav-category').siblings().on('mouseleave', function () {
+                $('.nav_box').finish().slideUp(200,function () { 
                 })
             })
-            $('.nav-category').siblings().on('mouseleave', function () {
-                $('.nav_box').stop().slideUp(200, 'linear', function () { })
-            })
+
+
+            // 解决导航二级菜单抽搐函数
+            function tiantian() {
+                $('.nav_box').stop().slideDown(0, 'linear', function () { })
+            }
+
+
             $('.nav_box')
                 .on({
                     mouseenter: function () {
-                        $(this).finish().show()
+                        $(this).finish().slideDown(0,function () { })
                     },
                     mouseleave: function () {
-                        $(this).finish().slideUp(200, 'linear', function () { })
+                        $(this).finish().slideUp(200,function () { })
                     }
                 })
             // 把服务跟社区加上
@@ -180,7 +209,7 @@ $('.header-search').on('mouseleave', handlerB)
 // 失去焦点的函数
 function blurA() {
     $('.keyword-list').css({
-        display:'none'
+        display: 'none'
     })
     handlerB()
     // 让搜索框有移入效果
@@ -229,7 +258,7 @@ $('.header-search>.inpj>input').on('click', function () {
     })
     // 鼠标按下时 让搜索框下面的DIV显示
     $('.keyword-list').css({
-        display:'block'
+        display: 'block'
     })
 })
 
@@ -263,10 +292,10 @@ function butB() {
 $('.header-search>.butj>button').on('mouseenter', butA)
 $('.header-search>.butj>button').on('mouseleave', butB)
 // 移动到搜索框下面DIV的时候解绑搜索框失焦事件
-$('.header-search>.keyword-list>ul').on('mouseenter',function(){
+$('.header-search>.keyword-list>ul').on('mouseenter', function () {
     $('.header-search>.inpj>input').off('blur', blurA)
 })
 // 移出搜索框下面DIV的时候重新绑定搜索框失焦事件
-$('.header-search>.keyword-list>ul').on('mouseleave',function(){
+$('.header-search>.keyword-list>ul').on('mouseleave', function () {
     $('.header-search>.inpj>input').on('blur', blurA)
 })

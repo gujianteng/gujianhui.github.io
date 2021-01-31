@@ -395,7 +395,7 @@ function guplay() {
 }
 guplay()
 
-console.log(ccgu);
+// console.log(ccgu);
 // 切换窗口和最小化时停止定时器
 document.addEventListener('visibilitychange', () => {
     //       一定要写 else if , 因为 visibilityState 属性一共有四种值
