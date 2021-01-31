@@ -242,6 +242,7 @@
                         height: 170px;
 
                         >li {
+                            cursor: pointer;
                             float: left;
                             margin-left: 1em;
                             transition: box-shadow .2s linear;

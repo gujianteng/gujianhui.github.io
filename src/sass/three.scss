@@ -89,6 +89,10 @@
                         width: 978px;
 
                         >.swiper-wrapper {
+                            >li {
+                                cursor: pointer;
+                            }
+
                             width: 978px;
                             height: 340px;
 
@@ -97,61 +101,73 @@
                                 border-top-style: solid;
                                 border-top-color: #ffac13;
                             }
+
                             >.li2 {
                                 border-top-width: 1px;
                                 border-top-style: solid;
                                 border-top-color: #83c44e;
                             }
+
                             >.li3 {
                                 border-top-width: 1px;
                                 border-top-style: solid;
                                 border-top-color: #2196f3;
                             }
+
                             >.li4 {
                                 border-top-width: 1px;
                                 border-top-style: solid;
                                 border-top-color: #e53935;
                             }
+
                             >.li5 {
                                 border-top-width: 1px;
                                 border-top-style: solid;
                                 border-top-color: #e53935;
                             }
+
                             >.li6 {
                                 border-top-width: 1px;
                                 border-top-style: solid;
                                 border-top-color: #ffac13;
                             }
+
                             >.li7 {
                                 border-top-width: 1px;
                                 border-top-style: solid;
                                 border-top-color: #83c44e;
                             }
+
                             >.li8 {
                                 border-top-width: 1px;
                                 border-top-style: solid;
                                 border-top-color: #2196f3;
                             }
+
                             >.li9 {
                                 border-top-width: 1px;
                                 border-top-style: solid;
                                 border-top-color: #e53935;
                             }
+
                             >.li10 {
                                 border-top-width: 1px;
                                 border-top-style: solid;
                                 border-top-color: #00c0a5;
                             }
+
                             >.li11 {
                                 border-top-width: 1px;
                                 border-top-style: solid;
                                 border-top-color: #ffac13;
                             }
+
                             >.li12 {
                                 border-top-width: 1px;
                                 border-top-style: solid;
                                 border-top-color: #83c44e;
                             }
+
                             >.li13 {
                                 border-top-width: 1px;
                                 border-top-style: solid;
@@ -204,7 +220,8 @@
 
                                     >.price {
                                         color: #ff6709;
-                                        >del{
+
+                                        >del {
                                             color: #b0b0b0;
                                         }
                                     }
@@ -313,6 +330,163 @@
 
                     }
 
+                }
+            }
+        }
+
+        >.home-banner-box {
+            height: 120px;
+            margin: 22px 0;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        >.home-brick-box {
+            margin-bottom: 8px;
+
+            >.box-hd {
+                >.title {
+                    margin: 0;
+                    font-size: 22px;
+                    font-weight: 200;
+                    line-height: 58px;
+                    color: #333;
+                }
+
+                >.more {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+
+                    >a {
+                        font-size: 16px;
+                        line-height: 58px;
+                        color: #424242;
+                        transition: all .4s;
+                        text-decoration: none;
+
+                        >i {}
+                    }
+                }
+
+                position: relative;
+                height: 58px;
+            }
+
+            >.box-bd {
+                >.row {
+                    margin-left: -14px;
+
+                    >.span4 {
+                        width: 234px;
+                        float: left;
+                        // margin-left: 14px;
+                        // min-height: 1px;
+
+                        >.brick-promo-list {
+                            height: 614px;
+
+                            >.brick-item-l {
+                                cursor: pointer;
+
+                                &:hover {
+                                    z-index: 2;
+                                    box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+                                    transform: translate3d(0, -2px, 0)
+                                }
+
+                                height: 614px;
+                                position: relative;
+                                z-index: 1;
+                                float: left;
+                                width: 234px;
+                                margin-left: 14px;
+                                margin-bottom: 14px;
+                                background: #fff;
+                                transition: all .2s linear;
+
+                                >img {
+                                    width: 234px;
+                                    height: 614px;
+                                }
+                            }
+                        }
+                    }
+
+                    >.span16 {
+                        width: 978px;
+                        float: left;
+                        margin-left: 14px;
+
+                        >.brick-list {
+                            margin: 0 0 -14px -14px;
+                            width: 992px;
+                            height: 614px;
+                            padding: 0;
+                            list-style-type: none;
+                            margin: 0px;
+
+                            >.brick-item {
+                                &:hover {
+                                    z-index: 2;
+                                    box-shadow: 0 15px 30px rgba(0,0,0,.1);
+                                    transform: translate3d(0,-2px,0)
+                                }
+                                height: 300px;
+                                padding: 20px 0;
+                                position: relative;
+                                z-index: 1;
+                                float: left;
+                                width: 234px;
+                                margin-left: 14px;
+                                margin-bottom: 14px;
+                                background: #fff;
+                                transition: all .2s linear;
+
+                                >.figure-img {
+                                    margin: 0 auto 18px;
+                                    width: 160px;
+                                    height: 160px;
+
+                                    >img {
+                                        vertical-align: top;
+                                        border: none;
+                                    }
+
+                                }
+
+                                >.title {
+                                    margin: 0 10px 2px;
+                                    text-align: center;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    color: #333;
+
+
+                                }
+
+                                >.desc {
+                                    margin: 0 10px 10px;
+                                    height: 18px;
+                                    font-size: 12px;
+                                    color: #b0b0b0;
+                                    text-align: center;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                }
+                                >.price{
+                                    margin: 0 10px 14px;
+                                    text-align: center;
+                                    color: #ff6700;
+
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
