@@ -357,10 +357,14 @@
                     position: absolute;
                     top: 0;
                     right: 0;
-
+                    
                     >a {
                         &:hover{
+                            >i{
+                                background: #ff6700
+                            }
                             color: #ff6700
+
                         }
                         font-size: 16px;
                         line-height: 58px;
@@ -368,7 +372,22 @@
                         transition: all .4s;
                         text-decoration: none;
 
-                        // >i {}
+                        >i {
+
+                            width: 12px;
+                            height: 12px;
+                            padding: 4px;
+                            // margin-left: 8px;
+                            border-radius: 16px;
+                            font-size: 12px;
+                            line-height: 12px;
+                            background: #b0b0b0;
+                            color: #fff;
+                            vertical-align: 1px;
+                            transition: all .4s;
+                            font-weight: 800;
+                            text-align: center;
+                        }
                     }
                 }
 
