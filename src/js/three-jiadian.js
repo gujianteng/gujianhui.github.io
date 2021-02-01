@@ -1,5 +1,5 @@
-
-
+// 第1大块div
+// 给最后一个div 加样式
 $('.home-brick-box-jiadian>.box-bd>.row>.span16>div').eq(0).children().eq(0).children().eq(7).children().eq(0).css({
     height: "143",
     width: "234",
@@ -9,7 +9,7 @@ $('.home-brick-box-jiadian>.box-bd>.row>.span16>div').eq(0).children().eq(0).chi
     zIndex: 1,
     float: "left",
 })
-
+// 给最后一个单独的li 加样式
 $('.home-brick-box-jiadian>.box-bd>.row>.span16>div').eq(0).children().eq(0).children().eq(7).children().eq(0).children().eq(0).css({
     position:" absolute",
     right: 20,
@@ -44,7 +44,8 @@ $('.home-brick-box-jiadian>.box-bd>.row>.span16>div').eq(0).children().eq(0).chi
 
 
 
-
+// 第2大块div
+// 给最后一个div 加样式
 
 $('.home-brick-box-jiadian>.box-bd>.row>.span16>div').eq(1).children().eq(0).children().eq(7).children().eq(0).css({
     height: "143",
@@ -56,6 +57,7 @@ $('.home-brick-box-jiadian>.box-bd>.row>.span16>div').eq(1).children().eq(0).chi
     float: "left",
 })
 
+// 给最后一个单独的li 加样式
 $('.home-brick-box-jiadian>.box-bd>.row>.span16>div').eq(1).children().eq(0).children().eq(7).children().eq(0).children().eq(0).css({
     position:" absolute",
     right: 20,
@@ -86,7 +88,7 @@ $('.home-brick-box-jiadian>.box-bd>.row>.span16>div').eq(1).children().eq(0).chi
 
 
 
-
+// 默认让第二大块div隐藏
 $('.home-brick-box-jiadian>.box-bd>.row>.span16').children().eq(1).css({
     display:"none"
 
