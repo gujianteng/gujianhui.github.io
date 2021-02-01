@@ -1,0 +1,430 @@
+.home-brick-box-zhineng {
+    >.box-hd {
+        >.more {
+            >ul {
+                margin: 0;
+                padding: 16px 0 0;
+                list-style-type: none;
+                font-size: 16px;
+                position: relative;
+                height: 58px;
+
+                >.tab-active {
+                    color: #ff6700;
+                    border-bottom: 2px solid #ff6700;
+                }
+
+                >li {
+                    margin: 0 0 0 30px;
+                    display: inline-block;
+                    padding: 0;
+                    color: #424242;
+                    border-bottom: 2px solid rgba(0, 0, 0, 0);
+                    transition: border .3s;
+                    cursor: pointer;
+
+
+
+                }
+            }
+        }
+    }
+
+    >.box-bd {
+        >.row {
+            >.span4 {
+                width: 234px;
+                float: left;
+                margin-left: 14px;
+                min-height: 1px;
+
+                ul {
+                    width: 248px;
+                    margin: 0 0 -14px -14px;
+
+                    li {
+                        height: 300px;
+                        padding: 0;
+                        position: relative;
+                        z-index: 1;
+                        float: left;
+                        width: 234px;
+                        margin-left: 14px;
+                        margin-bottom: 14px;
+                        background: #fff;
+                        transition: all .2s linear;
+
+                        &:hover {
+                            z-index: 2;
+                            box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+                            transform: translate3d(0, -2px, 0)
+                        }
+
+                        >img {
+                            height: 300px;
+                            width: 234px;
+                        }
+                    }
+                }
+            }
+
+            >.span16 {
+                float: left;
+                margin-left: 14px;
+                min-height: 1px;
+                width: 978px;
+
+                >.span16_div1{
+                    >.brick-list {
+                        margin: 0 0 -14px -14px;
+                        height: 614px;
+
+                        >div {
+                            >.brick-item {
+                                &:hover {
+                                    z-index: 2;
+                                    box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+                                    transform: translate3d(0, -2px, 0)
+                                }
+
+                                height: 300px;
+                                padding: 20px 0;
+                                position: relative;
+                                z-index: 1;
+                                float: left;
+                                width: 234px;
+                                margin-left: 14px;
+                                margin-bottom: 14px;
+                                background: #fff;
+                                transition: all .2s linear;
+                                cursor: pointer;
+
+                                >.figure-img {
+                                    margin: 0 auto 18px;
+                                    width: 160px;
+                                    height: 160px;
+
+                                    >img {
+                                        vertical-align: top;
+                                        border: none;
+                                    }
+
+                                }
+
+                                >.title {
+                                    margin: 0 10px 2px;
+                                    text-align: center;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    color: #333;
+
+
+                                }
+
+                                >.desc {
+                                    margin: 0 10px 10px;
+                                    height: 18px;
+                                    font-size: 12px;
+                                    color: #b0b0b0;
+                                    text-align: center;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                }
+
+                                >.price {
+                                    margin: 0 10px 14px;
+                                    text-align: center;
+                                    color: #ff6700;
+
+                                }
+                            }
+                        }
+
+                        >li {
+                            width: 234px;
+                            height: 143px;
+                            padding-top: 50px;
+                            position: relative;
+                            z-index: 1;
+                            float: left;
+                            width: 234px;
+                            margin-left: 14px;
+                            margin-bottom: 14px;
+                            background: #fff;
+                            transition: all .2s linear;
+                            &:hover {
+                                z-index: 2;
+                                box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+                                transform: translate3d(0, -2px, 0)
+                            }
+                            >.more{
+                                display: block;
+                                margin: 0 110px 0 30px;
+                                font-size: 18px;
+                                color: #333;
+                                >small{
+                                    width: 94px;
+                                    height: 18px;
+                                    color: #757575;
+                                    font-size: 12px;
+                                    display: block;
+                                }
+                            }
+                            >.figure-more{
+                                position: absolute;
+                                right: 35px;
+                                top: 48px;
+                                width: 48px;
+                                height: 48px;
+                                color: #ff6700;
+                                >i{
+                                    font-size: 48px;
+                                }
+                            }
+
+                        }
+
+                    }
+                }
+                >.span16_div2{
+                    >.brick-list {
+                        margin: 0 0 -14px -14px;
+                        height: 614px;
+
+                        >div {
+                            >.brick-item {
+                                &:hover {
+                                    z-index: 2;
+                                    box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+                                    transform: translate3d(0, -2px, 0)
+                                }
+
+                                height: 300px;
+                                padding: 20px 0;
+                                position: relative;
+                                z-index: 1;
+                                float: left;
+                                width: 234px;
+                                margin-left: 14px;
+                                margin-bottom: 14px;
+                                background: #fff;
+                                transition: all .2s linear;
+                                cursor: pointer;
+
+                                >.figure-img {
+                                    margin: 0 auto 18px;
+                                    width: 160px;
+                                    height: 160px;
+
+                                    >img {
+                                        vertical-align: top;
+                                        border: none;
+                                    }
+
+                                }
+
+                                >.title {
+                                    margin: 0 10px 2px;
+                                    text-align: center;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    color: #333;
+
+
+                                }
+
+                                >.desc {
+                                    margin: 0 10px 10px;
+                                    height: 18px;
+                                    font-size: 12px;
+                                    color: #b0b0b0;
+                                    text-align: center;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                }
+
+                                >.price {
+                                    margin: 0 10px 14px;
+                                    text-align: center;
+                                    color: #ff6700;
+
+                                }
+                            }
+                        }
+
+                        >li {
+                            width: 234px;
+                            height: 143px;
+                            padding-top: 50px;
+                            position: relative;
+                            z-index: 1;
+                            float: left;
+                            width: 234px;
+                            margin-left: 14px;
+                            margin-bottom: 14px;
+                            background: #fff;
+                            transition: all .2s linear;
+                            &:hover {
+                                z-index: 2;
+                                box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+                                transform: translate3d(0, -2px, 0)
+                            }
+                            >.more{
+                                display: block;
+                                margin: 0 110px 0 30px;
+                                font-size: 18px;
+                                color: #333;
+                                >small{
+                                    width: 94px;
+                                    height: 18px;
+                                    color: #757575;
+                                    font-size: 12px;
+                                    display: block;
+                                }
+                            }
+                            >.figure-more{
+                                position: absolute;
+                                right: 35px;
+                                top: 48px;
+                                width: 48px;
+                                height: 48px;
+                                color: #ff6700;
+                                >i{
+                                    font-size: 48px;
+                                }
+                            }
+
+                        }
+
+                    }
+                }
+                >.span16_div3{
+                    >.brick-list {
+                        margin: 0 0 -14px -14px;
+                        height: 614px;
+
+                        >div {
+                            >.brick-item {
+                                &:hover {
+                                    z-index: 2;
+                                    box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+                                    transform: translate3d(0, -2px, 0)
+                                }
+
+                                height: 300px;
+                                padding: 20px 0;
+                                position: relative;
+                                z-index: 1;
+                                float: left;
+                                width: 234px;
+                                margin-left: 14px;
+                                margin-bottom: 14px;
+                                background: #fff;
+                                transition: all .2s linear;
+                                cursor: pointer;
+
+                                >.figure-img {
+                                    margin: 0 auto 18px;
+                                    width: 160px;
+                                    height: 160px;
+
+                                    >img {
+                                        vertical-align: top;
+                                        border: none;
+                                    }
+
+                                }
+
+                                >.title {
+                                    margin: 0 10px 2px;
+                                    text-align: center;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    color: #333;
+
+
+                                }
+
+                                >.desc {
+                                    margin: 0 10px 10px;
+                                    height: 18px;
+                                    font-size: 12px;
+                                    color: #b0b0b0;
+                                    text-align: center;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                }
+
+                                >.price {
+                                    margin: 0 10px 14px;
+                                    text-align: center;
+                                    color: #ff6700;
+
+                                }
+                            }
+                        }
+
+                        >li {
+                            width: 234px;
+                            height: 143px;
+                            padding-top: 50px;
+                            position: relative;
+                            z-index: 1;
+                            float: left;
+                            width: 234px;
+                            margin-left: 14px;
+                            margin-bottom: 14px;
+                            background: #fff;
+                            transition: all .2s linear;
+                            &:hover {
+                                z-index: 2;
+                                box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+                                transform: translate3d(0, -2px, 0)
+                            }
+                            >.more{
+                                display: block;
+                                margin: 0 110px 0 30px;
+                                font-size: 18px;
+                                color: #333;
+                                >small{
+                                    width: 94px;
+                                    height: 18px;
+                                    color: #757575;
+                                    font-size: 12px;
+                                    display: block;
+                                }
+                            }
+                            >.figure-more{
+                                position: absolute;
+                                right: 35px;
+                                top: 48px;
+                                width: 48px;
+                                height: 48px;
+                                color: #ff6700;
+                                >i{
+                                    font-size: 48px;
+                                }
+                            }
+
+                        }
+
+                    }
+                }
+
+
+            }
+        }
+    }
+}

@@ -88,43 +88,26 @@ $('.home-brick-box-jiadian>.box-bd>.row>.span16>div').eq(1).children().eq(0).chi
 
 
 
-// 默认让第二大块div隐藏
-$('.home-brick-box-jiadian>.box-bd>.row>.span16').children().eq(1).css({
+// 默认让除了第一大块的其他元素隐藏
+$('.home-brick-box-jiadian>.box-bd>.row>.span16').children().first().siblings().css({
     display:"none"
 
 })
 
-// TEB 切换
-$('.box-hd>.more>.tab-list').children().first().on('mouseenter',function(){
-    if($('.box-hd>.more>.tab-list').children().first().hasClass("tab-active")){
+// 家电TEB 切换
+$('.home-brick-box-jiadian>.box-hd>.more>.tab-list').children().on('mouseenter',function(){
+    var index=$(this).index()
+    if($(this).hasClass("tab-active")){
 
     }else{
         $(this).removeClass().addClass('tab-active')
-        $('.box-hd>.more>.tab-list').children().last().removeClass()
+        $(this).siblings().removeClass()
     }
-    $('.home-brick-box-jiadian>.box-bd>.row>.span16').children().eq(1).css({
+    $('.home-brick-box-jiadian>.box-bd>.row>.span16').children().eq(index).siblings().css({
         display:"none"
     
     })
-    $('.home-brick-box-jiadian>.box-bd>.row>.span16').children().eq(0).css({
+    $('.home-brick-box-jiadian>.box-bd>.row>.span16').children().eq(index).css({
         display:"block"
-    })
-})
-
-
-$('.box-hd>.more>.tab-list').children().last().on('mouseenter',function(){
-    if($('.box-hd>.more>.tab-list').children().last().hasClass("tab-active")){
-
-    }
-    else{
-        $(this).removeClass().addClass('tab-active')
-        $('.box-hd>.more>.tab-list').children().first().removeClass()
-    }
-    $('.home-brick-box-jiadian>.box-bd>.row>.span16').children().eq(0).css({
-        display:"none"
-    })
-    $('.home-brick-box-jiadian>.box-bd>.row>.span16').children().eq(1).css({
-        display:"block"
-    
     })
 })
