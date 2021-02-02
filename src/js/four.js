@@ -1,0 +1,10 @@
+$('.four>.container>.site-footer>.footer-links>div>.follow>a:nth-of-type(2)').on('mouseenter',function(){
+    $('.four>.container>.site-footer>.footer-links>div>.follow>img').css({
+        display:'block'
+    })
+})
+$('.four>.container>.site-footer>.footer-links>div>.follow>a:nth-of-type(2)').on('mouseleave',function(){
+    $('.four>.container>.site-footer>.footer-links>div>.follow>img').css({
+        display:'none'
+    })
+})
