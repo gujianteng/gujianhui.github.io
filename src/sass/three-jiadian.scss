@@ -46,6 +46,7 @@
                     margin: 0 0 -14px -14px;
 
                     li {
+                        cursor: pointer;
                         height: 300px;
                         padding: 0;
                         position: relative;
@@ -81,8 +82,11 @@
                     >.brick-list {
                         margin: 0 0 -14px -14px;
                         height: 614px;
-
+                        >li{
+                            cursor: pointer;
+                        }
                         >div {
+
                             >.brick-item {
                                 &:hover {
                                     z-index: 2;
@@ -197,7 +201,9 @@
                     >.brick-list {
                         margin: 0 0 -14px -14px;
                         height: 614px;
-
+                        >li{
+                            cursor: pointer;
+                        }
                         >div {
                             >.brick-item {
                                 &:hover {
