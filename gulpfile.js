@@ -54,6 +54,10 @@ const libHandler = () => {
         .pipe(gulp.dest('./dist/lib'))
 }
 
+const indexHandler=()=>{
+    return gulp.src('./src/index.html')
+    .pipe(gulp.dest('./dist'))
+}
 const delHandler = () => {
     return del(['./dist'])
 }
@@ -61,8 +65,9 @@ const webserverHandler = () => {
     return gulp.src('./dist')
         .pipe(webserver({
             host: 'localhost',
-            port: 8080,
-            open: './pages/index.html',
+            port: 8000,
+            // open: './pages',
+            open: '/',
             livereload: true,
             proxies:[
                 {
@@ -89,5 +94,6 @@ const watchHandler = () => {
 // module.exports.img=imgHandler
 // module.exports.lib=libHandler
 module.exports.default = gulp.series(
-    delHandler, gulp.parallel(cssHandler, sassHandler,jsHandler, htmlHandler, imgHandler, libHandler), webserverHandler, watchHandler
+    delHandler,
+     gulp.parallel(indexHandler,cssHandler, sassHandler,jsHandler, htmlHandler, imgHandler, libHandler), webserverHandler, watchHandler
 )

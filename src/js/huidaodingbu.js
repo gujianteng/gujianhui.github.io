@@ -57,7 +57,6 @@ $('.home-tool-bar').css({
 $(window).on("resize", function () {
 
     var guleft = parseInt($('.header-search').offset().left + 298) 
-
     if ($(window).width() > 1226) {
         $('.home-tool-bar').css({
             left: guleft,
