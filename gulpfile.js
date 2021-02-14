@@ -54,10 +54,6 @@ const libHandler = () => {
         .pipe(gulp.dest('./dist/lib'))
 }
 
-const indexHandler=()=>{
-    return gulp.src('./src/index.html')
-    .pipe(gulp.dest('./dist'))
-}
 const delHandler = () => {
     return del(['./dist'])
 }
@@ -95,5 +91,5 @@ const watchHandler = () => {
 // module.exports.lib=libHandler
 module.exports.default = gulp.series(
     delHandler,
-     gulp.parallel(indexHandler,cssHandler, sassHandler,jsHandler, htmlHandler, imgHandler, libHandler), webserverHandler, watchHandler
+     gulp.parallel(cssHandler, sassHandler,jsHandler, htmlHandler, imgHandler, libHandler), webserverHandler, watchHandler
 )
